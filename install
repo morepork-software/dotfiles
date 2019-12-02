@@ -4,7 +4,6 @@ declare local dir=$(dirname $0)
 
 # Template for copying files for root and user
 function copy {
-  # 
   for file in "$@"; do
     cp ${dir}/${file} ~/${file}           # Admin User
     sudo cp ${dir}/${file} /root/${file}  # Root User
