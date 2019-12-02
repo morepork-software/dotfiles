@@ -1,0 +1,21 @@
+#!/bin/bash
+
+declare local dir=dotfiles
+
+# Template for copying files for root and user
+function copy {
+  # 
+  for file in "$@"; do
+    cp ${dir}/${file} ~/${file}           # Admin User
+    sudo cp ${dir}/${file} /root/${file}  # Root User
+  done
+}
+
+# Pull configs
+git clone https://github.com/morepork-software/${dir}
+
+# Copy the files
+copy .bashrc .vimrc
+
+# Cleanup
+sudo rm -R ./${dir}
