@@ -19,6 +19,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 alias pacman='sudo pacman $LS_OPTIONS'
+alias systemctl='sudo systemctl $LS_OPTIONS'
 
 # Powerline
 powerline-daemon -q
