@@ -1,6 +1,6 @@
-#
-# ~/.vimrc
-#
+"
+" ~/.vimrc
+"
 
 " Defaults:
   syntax on           " Enable syntax highlighting
