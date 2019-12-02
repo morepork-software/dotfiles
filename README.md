@@ -8,10 +8,10 @@
 ``` bash
 git clone https://github.com/morepork-software/dotfiles
 
-tee ./dotfiles/.bashrc ~/.bashrc /root/.bashrc > /dev/null
-tee ./dotfiles/.vimrc ~/.vimrc /root/.vimrc > /dev/null
+cp dotfiles/.bashrc ~/.bashrc; sudo cp dotfiles/.bashrc /root/.bashrc
+cp dotfiles/.bashrc ~/.bashrc; sudo cp dotfiles/.bashrc /root/.bashrc
 
-rm -R ./dotfiles
+sudo rm -R ./dotfiles
 ```
 
 Restart shell
