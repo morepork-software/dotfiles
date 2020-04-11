@@ -11,14 +11,16 @@
   set t_Co=256        " Column width 256 characters
   set encoding=utf-8  " Default encoding
 
+  set tabstop=4       " Set tab to 4 spaces
+  set shiftwidth=4 
+  set expandtab
+  set smarttab
+
+  set list lcs=tab:»·,trail:·,nbsp:·,space:·,extends:>,precedes:<
+
+" Dim all space characters
+  autocmd BufEnter * hi NonText ctermfg=grey guifg=grey70
+  autocmd BufEnter * hi SpecialKey ctermfg=grey guifg=grey70
+
 " Autocomplete:
   set wildmode=longest,list,full
-
-" Powerline:
-  python3 from powerline.vim import setup as powerline_setup
-  python3 powerline_setup()
-  python3 del powerline_setup
-  
-  let g:powerline_pycmd="py3"
-  let g:powerline_symbols="fancy"
-  
